@@ -47,61 +47,51 @@ trait v128Ext: Sized {
     unsafe fn as_v128(self) -> v128;
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_u8x16(self) -> u8x16 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_u16x8(self) -> u16x8 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_u32x4(self) -> u32x4 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_u64x2(self) -> u64x2 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_i8x16(self) -> i8x16 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_i16x8(self) -> i16x8 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_i32x4(self) -> i32x4 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_i64x2(self) -> i64x2 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_f32x4(self) -> f32x4 {
         transmute(self.as_v128())
     }
 
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_f64x2(self) -> f64x2 {
         transmute(self.as_v128())
     }
@@ -109,7 +99,6 @@ trait v128Ext: Sized {
 
 impl v128Ext for v128 {
     #[inline]
-    #[target_feature(enable = "simd128")]
     unsafe fn as_v128(self) -> Self {
         self
     }
